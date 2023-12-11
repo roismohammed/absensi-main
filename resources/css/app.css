@@ -1,0 +1,89 @@
+.docs-menu-item.active {
+    color: #0054a6;
+    border-left-color: #0054a6;
+}
+
+.docs-menu-item {
+    color: #515671;
+    padding: 0.25rem 1rem;
+    border-left: 1px solid #eceef7;
+    transition: border-color .5s, color .5s;
+}
+
+.docs-menu-item:hover {
+    text-decoration: none;
+}
+
+.accordion {
+    --tblr-accordion-color: var(--tblr-body-color);
+    --tblr-accordion-bg: transparent;
+    --tblr-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    --tblr-accordion-border-color: var(--tblr-border-color-translucent);
+    --tblr-accordion-border-width: var(--tblr-border-width);
+    --tblr-accordion-border-radius: var(--tblr-border-radius);
+    --tblr-accordion-inner-border-radius: calc(var(--tblr-border-radius) - (var(--tblr-border-width)));
+    --tblr-accordion-btn-padding-x: 1.25rem;
+    --tblr-accordion-btn-padding-y: 0px !important;
+    --tblr-accordion-btn-color: var(--tblr-body-color);
+    --tblr-accordion-btn-bg: transparent;
+    --tblr-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23182433'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --tblr-accordion-btn-icon-width: 1rem;
+    --tblr-accordion-btn-icon-transform: rotate(-180deg);
+    --tblr-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --tblr-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d2b4e'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --tblr-accordion-btn-focus-border-color: var(--tblr-border-color-translucent);
+    --tblr-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.25);
+    --tblr-accordion-body-padding-y: 1rem;
+    --tblr-accordion-active-color: inherit;
+    --tblr-accordion-active-bg: transparent;
+}
+
+.simplebar-scrollbar::before {
+    background: #c7c7c7 !important;
+    border-radius: 1px !important;
+}
+
+body::-webkit-scrollbar {
+    border-radius: 1px !important;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 1px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 1px !important;
+}
+
+.dropdown-toggle:after {
+    margin-bottom: 3px !important;
+    margin-left: 7px !important;
+}
+
+
+.sidebar-apps .nav-item a:hover {
+    font-weight: 700 !important;
+}
+
+.img-container {
+    background-image: url('../dist/img/nurakartun.jpeg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.box-login{
+    z-index: 1;
+}
