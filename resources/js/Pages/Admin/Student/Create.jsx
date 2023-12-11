@@ -1,17 +1,17 @@
 import React from 'react';
 import Authenticated from "@/Layouts/AuthenticatedLayout";
-import {Head, useForm} from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import PageHeader from "@/Components/PageHeader.jsx";
-import {Card, Form} from "react-bootstrap";
+import { Card, Form } from "react-bootstrap";
 import InputText from "@/Components/InputText.jsx";
-import {IconDeviceFloppy, IconDeviceMobile, IconId, IconMail, IconUser} from "@tabler/icons-react";
+import { IconDeviceFloppy, IconDeviceMobile, IconId, IconMail, IconUser } from "@tabler/icons-react";
 import InputSelect from "@/Components/InputSelect.jsx";
 import InputTextArea from "@/Components/InputTextArea.jsx";
 import toast from "react-hot-toast";
 
-const Create = ({}) => {
+const Create = ({ }) => {
 
-    const {data, setData, processing, errors, post, reset} = useForm({
+    const { data, setData, processing, errors, post, reset } = useForm({
         name: '',
         nis: '',
         email: '',
@@ -35,7 +35,7 @@ const Create = ({}) => {
 
     return (
         <div>
-            <Head title='Tambah Siswa'/>
+            <Head title='Tambah Siswa' />
             <Card className={'rounded-3 border-light py-3 shadow-sm'}>
                 <form onSubmit={submit}>
                     <div className="row">
@@ -45,32 +45,32 @@ const Create = ({}) => {
                                 <p>Kamu dapat menambahakn siswa dengan biodata yang dibutuhkan</p>
                                 <p>User untuk login siswa akan di ambil berdasarkan <span
                                     className={'fw-semibold'}>Email</span> dan Password sesuai <span
-                                    className={'fw-semibold'}>NIS</span></p>
+                                        className={'fw-semibold'}>NIS</span></p>
                             </Card.Body>
                         </div>
                         <div className="col">
                             <Card.Body>
                                 <InputText
-                                    label={'Nama Lengkap'} icon={<IconUser size={16}/>}
+                                    label={'Nama Lengkap'} icon={<IconUser size={16} />}
                                     placeholder={'Masukan Nama Lengkap'}
                                     value={data.name}
                                     onChange={e => setData('name', e.target.value)}
                                 />
-                                <InputText label={'NIS'} icon={<IconId size={16}/>}
-                                           placeholder={'Masukan Nomor Induk Siswa'}
-                                           value={data.nis}
-                                           onChange={(e) => setData('nis', e.target.value)}
+                                <InputText label={'NIS'} icon={<IconId size={16} />}
+                                    placeholder={'Masukan Nomor Induk Siswa'}
+                                    value={data.nis}
+                                    onChange={(e) => setData('nis', e.target.value)}
                                 />
-                                <InputText label={'Telepon'} icon={<IconDeviceMobile size={16}/>}
-                                           placeholder={'Masukan Email'}
-                                           value={data.phone}
-                                           onChange={(e) => setData('phone', e.target.value)}
+                                <InputText label={'Telepon'} icon={<IconDeviceMobile size={16} />}
+                                    placeholder={'Masukkan no telepon'}
+                                    value={data.phone}
+                                    onChange={(e) => setData('phone', e.target.value)}
                                 />
-                                <InputText type={'email'} label={'Email'} icon={<IconMail size={16}/>}
-                                           placeholder={'Masukan Telepon'}
-                                           value={data.email}
-                                           onChange={(e) => setData('email', e.target.value)}
-                                           errors={errors.email}
+                                <InputText type={'email'} label={'Email'} icon={<IconMail size={16} />}
+                                    placeholder={'Masukan Email'}
+                                    value={data.email}
+                                    onChange={(e) => setData('email', e.target.value)}
+                                    errors={errors.email}
                                 />
                                 <InputSelect
                                     label={'Jenis Kelamin'}
@@ -98,7 +98,7 @@ const Create = ({}) => {
                                 />
                                 <Form.Group className={'text-end'}>
                                     <button disabled={processing} className={'btn btn-primary'}>
-                                        <IconDeviceFloppy className={'me-1'} size={16}/>
+                                        <IconDeviceFloppy className={'me-1'} size={16} />
                                         Simpan
                                     </button>
                                 </Form.Group>
